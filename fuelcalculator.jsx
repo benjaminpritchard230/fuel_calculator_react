@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import petrol from "./petrol.jpg";
 
 const Fuelcalculator = ({
   vehicleMpg,
@@ -54,12 +55,16 @@ const Fuelcalculator = ({
                 onChange={(e) => setFuelCost(e.target.value)}
               />
             </div>
+            <h2>The fuel will cost £{journeyCost}</h2>
           </div>
           <div className="col-6 align-items-center justify-content-between">
-            Hello
+            <img
+              className="img-fluid w-100 d-none d-sm-block rounded shadow"
+              src={petrol}
+              alt=""
+            />
           </div>
         </div>
-        <h1>The fuel will cost £{journeyCost}</h1>
       </div>
     </section>
   );
